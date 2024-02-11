@@ -179,11 +179,26 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: ListView(
                     scrollDirection: Axis.vertical,
                     children: [
-                      Trendingtabs(),
-                      Trendingtabs(),
-                      Trendingtabs(),
-                      Trendingtabs(),
-                      Trendingtabs(),
+                      Trendingtabs(
+                        imagePath: 'Images/crops.jpg',
+                        titlePath: 'Farmers Benefits of Crop Season',
+                      ),
+                      Trendingtabs(
+                        imagePath: 'Images/kashmiri.jpg',
+                        titlePath: 'Are yields worth the cost?',
+                      ),
+                      Trendingtabs(
+                        imagePath: 'Images/Rural.jpg',
+                        titlePath: 'Harvest Brings Boom to Areas',
+                      ),
+                      Trendingtabs(
+                        imagePath: 'Images/Landscape.jpg',
+                        titlePath: ' Crop Brings Prosperity to Areas',
+                      ),
+                      Trendingtabs(
+                        imagePath: 'Images/Tractor.jpg',
+                        titlePath: 'Tractor-Powered Triumph ',
+                      ),
                     ],
                   ),
                 ),

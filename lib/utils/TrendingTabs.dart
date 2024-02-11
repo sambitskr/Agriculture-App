@@ -2,7 +2,10 @@ import 'package:agriculture_app/AppColors.dart';
 import 'package:flutter/material.dart';
 
 class Trendingtabs extends StatelessWidget {
-  const Trendingtabs({super.key});
+  final String imagePath;
+  final String titlePath;
+  const Trendingtabs(
+      {super.key, required this.imagePath, required this.titlePath});
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +28,7 @@ class Trendingtabs extends StatelessWidget {
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(10),
                 child: Image.asset(
-                  'Images/Eldenring.png',
+                  imagePath,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -37,8 +40,8 @@ class Trendingtabs extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "How to do agriculture in India",
-                  softWrap: true,
+                  titlePath,
+                  overflow: TextOverflow.ellipsis,
                   style: TextStyle(fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
@@ -61,7 +64,7 @@ class Trendingtabs extends StatelessWidget {
                       width: 10,
                     ),
                     Icon(
-                      Icons.one_k_plus_outlined,
+                      Icons.favorite,
                       size: 20,
                     ),
                     SizedBox(

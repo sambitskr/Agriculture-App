@@ -57,10 +57,22 @@ class CataloguePage extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 23, vertical: 20),
           child: Center(
             child: Column(children: [
-              CatalogueTabs(),
-              CatalogueTabs(),
-              CatalogueTabs(),
-              CatalogueTabs(),
+              CatalogueTabs(
+                catalogueName: 'Crop Management',
+                imagepath: 'Images/fields.jpg',
+              ),
+              CatalogueTabs(
+                catalogueName: 'Technology',
+                imagepath: 'Images/Tractor.jpg',
+              ),
+              CatalogueTabs(
+                catalogueName: 'Climate',
+                imagepath: 'Images/Landscape.jpg',
+              ),
+              CatalogueTabs(
+                catalogueName: 'Vegetables',
+                imagepath: 'Images/vegetables.jpg',
+              ),
             ]),
           ),
         ),
