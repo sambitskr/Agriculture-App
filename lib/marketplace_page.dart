@@ -4,6 +4,7 @@ import 'package:agriculture_app/utils/BrowsebyCategory.dart';
 import 'package:agriculture_app/utils/MarketplaceTiles.dart';
 import 'package:agriculture_app/utils/MostPopular.dart';
 import 'package:flutter/material.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class MarketplacePage extends StatelessWidget {
   const MarketplacePage({super.key});
@@ -19,7 +20,9 @@ class MarketplacePage extends StatelessWidget {
         leading: Padding(
           padding: const EdgeInsets.only(top: 8, left: 23, bottom: 8),
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              SimpleHiddenDrawerController.of(context).toggle();
+            },
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
