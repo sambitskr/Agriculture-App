@@ -54,9 +54,18 @@ class _TopTrendingPageState extends State<TopTrendingPage> {
                 Container(
                   height: 195,
                   decoration: BoxDecoration(
-                    color: Colors.blue,
+                    image: DecorationImage(
+                        image: AssetImage('Images/Tractor.jpg'),
+                        fit: BoxFit.cover),
                     borderRadius: BorderRadius.circular(15),
                   ),
+                  // child: ClipRRect(
+                  //   borderRadius: BorderRadius.circular(15),
+                  //   child: Image.asset(
+                  //     'Images/Tractor.jpg',
+                  //     fit: BoxFit.fill,
+                  //   ),
+                  // ),
                 ),
                 SizedBox(
                   height: 25,

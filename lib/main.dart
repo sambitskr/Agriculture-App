@@ -1,5 +1,7 @@
 import 'package:agriculture_app/AppColors.dart';
+import 'package:agriculture_app/Catalogue.dart';
 import 'package:agriculture_app/Homepage.dart';
+import 'package:agriculture_app/Login.dart';
 import 'package:agriculture_app/NavigationBar.dart';
 import 'package:agriculture_app/TopTrending.dart';
 import 'package:agriculture_app/VideoPage.dart';
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: HiddenDrawerPage(),
+      home: CataloguePage(),
     );
   }
 }
