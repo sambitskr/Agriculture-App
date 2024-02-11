@@ -1,5 +1,8 @@
 import 'package:agriculture_app/HomePage.dart';
+import 'package:agriculture_app/Settings.dart';
 import 'package:agriculture_app/TopTrending.dart';
+import 'package:agriculture_app/category_page.dart';
+import 'package:agriculture_app/community_page.dart';
 import 'package:agriculture_app/marketplace_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
@@ -30,6 +33,14 @@ class _HiddenDrawerPageState extends State<HiddenDrawerPage> {
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
+          name: 'Categories',
+          baseStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          selectedStyle: TextStyle(),
+        ),
+        CategoryPage(),
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
           name: 'MarketPlace',
           baseStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           selectedStyle: TextStyle(),
@@ -38,11 +49,19 @@ class _HiddenDrawerPageState extends State<HiddenDrawerPage> {
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(
-          name: 'Top Trending',
+          name: 'Community',
           baseStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           selectedStyle: TextStyle(),
         ),
-        TopTrendingPage(),
+        CommunityPage(),
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+          name: 'Settings',
+          baseStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          selectedStyle: TextStyle(),
+        ),
+        SettingsPage(),
       ),
     ];
   }

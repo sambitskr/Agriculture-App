@@ -19,7 +19,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: IconButton(
-          icon: Icon(
+          icon: const Icon(
             Icons.menu,
             color: Colors.black,
           ),
@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsets.only(top: 10.0),
+              padding: EdgeInsets.only(top: 10.0),
               child: Text(
                 'Hi Sambit,',
                 style: TextStyle(
@@ -66,7 +66,8 @@ class _MyHomePageState extends State<MyHomePage> {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25.0, vertical: 25.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 25.0, vertical: 25.0),
             child: Column(
               children: [
                 //Search Bar
@@ -75,14 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
                     color: Colors.grey[300],
                     borderRadius: BorderRadius.circular(12),
                   ),
-                  child: TextField(
+                  child: const TextField(
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         prefix: Icon(Icons.search),
                         hintText: "Search Here..."),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 //Free Consultation
@@ -109,7 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -118,7 +119,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                     "Get free support from\n our customer service")
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 10,
                             ),
                             Row(
@@ -132,7 +133,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                   // padding: EdgeInsets.all(5),
                                   alignment: Alignment.center,
-                                  child: Text(
+                                  child: const Text(
                                     "Call now",
                                     style: TextStyle(
                                         color: Colors.white,
@@ -143,7 +144,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             ),
                           ],
                         ),
-                        SizedBox(
+                        const SizedBox(
                           width: 2,
                         ),
 
@@ -155,17 +156,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 //Top Trending
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
+                  children: [
                     Text(
                       'Top Trending',
                       style:
-                          TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       'See all',
@@ -174,105 +175,25 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
-                Container(
-                  height: 350,
-                  child: ListView(
-                    scrollDirection: Axis.vertical,
-                    children: [
-                      Trendingtabs(
-                        imagePath: 'Images/crops.jpg',
-                        titlePath: 'Farmers Benefits of Crop Season',
-                      ),
-                      Trendingtabs(
-                        imagePath: 'Images/kashmiri.jpg',
-                        titlePath: 'Are yields worth the cost?',
-                      ),
-                      Trendingtabs(
-                        imagePath: 'Images/Rural.jpg',
-                        titlePath: 'Harvest Brings Boom to Areas',
-                      ),
-                      Trendingtabs(
-                        imagePath: 'Images/Landscape.jpg',
-                        titlePath: ' Crop Brings Prosperity to Areas',
-                      ),
-                      Trendingtabs(
-                        imagePath: 'Images/Tractor.jpg',
-                        titlePath: 'Tractor-Powered Triumph ',
-                      ),
-                    ],
-                  ),
+                const Trendingtabs(
+                  imagePath: 'Images/crops.jpg',
+                  titlePath: 'Farmers Benefits of Crop Season',
                 ),
-
-                //Navigation BAr
-
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        Icon(
-                          Icons.home_rounded,
-                          color: AppColors.primaryColor,
-                          size: 35,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "Home",
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: AppColors.primaryColor.withOpacity(0.5)),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(
-                          Icons.category_rounded,
-                          size: 35,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "Categories",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(
-                          Icons.shopping_bag_rounded,
-                          size: 35,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "Cart",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    ),
-                    Column(
-                      children: [
-                        Icon(
-                          Icons.person,
-                          size: 35,
-                        ),
-                        SizedBox(
-                          height: 5,
-                        ),
-                        Text(
-                          "Profile",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ],
-                    ),
-                  ],
+                const Trendingtabs(
+                  imagePath: 'Images/kashmiri.jpg',
+                  titlePath: 'Are yields worth the cost?',
+                ),
+                const Trendingtabs(
+                  imagePath: 'Images/Rural.jpg',
+                  titlePath: 'Harvest Brings Boom to Areas',
+                ),
+                const Trendingtabs(
+                  imagePath: 'Images/Landscape.jpg',
+                  titlePath: ' Crop Brings Prosperity to Areas',
+                ),
+                const Trendingtabs(
+                  imagePath: 'Images/Tractor.jpg',
+                  titlePath: 'Tractor-Powered Triumph ',
                 ),
               ],
             ),

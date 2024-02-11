@@ -12,7 +12,7 @@ class MarketplaceTilePage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ImageWithOverlayTextSmall(
-            imagePath: 'Images/Eldenring.png',
+            imagePath: 'Images/fertilizer.jpg',
             width: 180,
             height: 200,
           ),

@@ -24,11 +24,11 @@ class MarketplacePage extends StatelessWidget {
               SimpleHiddenDrawerController.of(context).toggle();
             },
             child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                color: Colors.black.withOpacity(0.05),
+              decoration: BoxDecoration(),
+              child: const Icon(
+                Icons.menu,
+                color: Colors.black,
               ),
-              child: const Icon(Icons.menu),
             ),
           ),
         ),

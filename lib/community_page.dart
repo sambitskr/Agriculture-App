@@ -1,7 +1,8 @@
 import 'package:agriculture_app/AppColors.dart';
-import 'package:agriculture_app/discussions_page.dart';
-import 'package:agriculture_app/jobs_page.dart';
+import 'package:agriculture_app/utils/discussions_page.dart';
+import 'package:agriculture_app/utils/jobs_page.dart';
 import 'package:flutter/material.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class CommunityPage extends StatelessWidget {
   const CommunityPage({super.key});
@@ -20,11 +21,15 @@ class CommunityPage extends StatelessWidget {
             child: GestureDetector(
               onTap: () {},
               child: Container(
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.black.withOpacity(0.05),
+                child: IconButton(
+                  icon: const Icon(
+                    Icons.menu,
+                    color: Colors.black,
+                  ),
+                  onPressed: () {
+                    SimpleHiddenDrawerController.of(context).toggle();
+                  },
                 ),
-                child: const Icon(Icons.menu),
               ),
             ),
           ),

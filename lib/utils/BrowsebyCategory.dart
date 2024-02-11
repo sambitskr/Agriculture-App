@@ -9,7 +9,7 @@ class BrowsebyCategoryTiles extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: 10),
       child: ImageWithOverlayTextSmall(
-        imagePath: 'Images/Eldenring.png',
+        imagePath: 'Images/fertilizer.jpg',
         overlayText: 'Seeds',
         width: 180,
         height: 200,
