@@ -1,12 +1,14 @@
+import 'package:agriculture_app/AppColors.dart';
+import 'package:agriculture_app/image_with_text.dart';
+import 'package:agriculture_app/utils/MarketplaceTiles.dart';
 import 'package:flutter/material.dart';
-import 'package:nodeit/constants.dart';
-import 'package:nodeit/image_with_text.dart';
 
 class MarketplacePage extends StatelessWidget {
   const MarketplacePage({super.key});
 
   @override
   Widget build(BuildContext context) {
+    double size = MediaQuery.of(context).size.width - 46;
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -28,7 +30,7 @@ class MarketplacePage extends StatelessWidget {
         title: const Text(
           "Marketplace",
           style: TextStyle(
-              color: AppColors.textPrimary,
+              color: AppColors.textPrimaryDark,
               fontSize: 20,
               fontWeight: FontWeight.w500),
         ),
@@ -63,14 +65,15 @@ class MarketplacePage extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
+                      width: (size / 5) * 3,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(10),
                         color: AppColors.primaryColor,
                       ),
-                      child: const Padding(
+                      child: Padding(
                         padding:
-                            EdgeInsets.symmetric(vertical: 10, horizontal: 90),
+                            EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -86,6 +89,7 @@ class MarketplacePage extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold),
+                              overflow: TextOverflow.ellipsis,
                             ),
                           ],
                         ),
@@ -98,6 +102,7 @@ class MarketplacePage extends StatelessWidget {
                   GestureDetector(
                     onTap: () {},
                     child: Container(
+                      width: (size / 5) * 1,
                       decoration: BoxDecoration(
                         shape: BoxShape.rectangle,
                         borderRadius: BorderRadius.circular(10),
@@ -122,7 +127,7 @@ class MarketplacePage extends StatelessWidget {
                   const Text(
                     'Personalized picks for you',
                     style: TextStyle(
-                        color: AppColors.textPrimary,
+                        color: AppColors.textPrimaryDark,
                         fontSize: 23,
                         fontWeight: FontWeight.bold),
                   ),
@@ -148,195 +153,15 @@ class MarketplacePage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const SingleChildScrollView(
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
+                    MarketplaceTilePage(),
+                    MarketplaceTilePage(),
+                    MarketplaceTilePage(),
+                    MarketplaceTilePage(),
+                    MarketplaceTilePage(),
                   ],
                 ),
               ),
@@ -348,7 +173,7 @@ class MarketplacePage extends StatelessWidget {
                   const Text(
                     'Most Popular deals',
                     style: TextStyle(
-                        color: AppColors.textPrimary,
+                        color: AppColors.textPrimaryDark,
                         fontSize: 23,
                         fontWeight: FontWeight.bold),
                   ),
@@ -374,7 +199,7 @@ class MarketplacePage extends StatelessWidget {
               const SizedBox(
                 height: 15,
               ),
-              const SingleChildScrollView(
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
@@ -577,14 +402,14 @@ class MarketplacePage extends StatelessWidget {
               const Text(
                 'Browse by Category',
                 style: TextStyle(
-                    color: AppColors.textPrimary,
+                    color: AppColors.textPrimaryDark,
                     fontSize: 23,
                     fontWeight: FontWeight.bold),
               ),
               const SizedBox(
                 height: 15,
               ),
-              const SingleChildScrollView(
+              SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [

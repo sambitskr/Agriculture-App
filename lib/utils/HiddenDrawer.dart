@@ -1,5 +1,6 @@
 import 'package:agriculture_app/HomePage.dart';
 import 'package:agriculture_app/TopTrending.dart';
+import 'package:agriculture_app/marketplace_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
@@ -26,6 +27,14 @@ class _HiddenDrawerPageState extends State<HiddenDrawerPage> {
           selectedStyle: TextStyle(),
         ),
         const MyHomePage(),
+      ),
+      ScreenHiddenDrawer(
+        ItemHiddenMenu(
+          name: 'MarketPlace',
+          baseStyle: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          selectedStyle: TextStyle(),
+        ),
+        const MarketplacePage(),
       ),
       ScreenHiddenDrawer(
         ItemHiddenMenu(

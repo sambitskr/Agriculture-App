@@ -10,7 +10,8 @@ class ImageWithOverlayText extends StatelessWidget {
   final double textSize;
   final FontWeight textWeight;
   final double borderRadius;
-  final double containerWidthFactor; // Factor of screen width for container width
+  final double
+      containerWidthFactor; // Factor of screen width for container width
 
   const ImageWithOverlayText({
     Key? key,
@@ -23,7 +24,8 @@ class ImageWithOverlayText extends StatelessWidget {
     this.textSize = 15,
     this.textWeight = FontWeight.w400,
     this.borderRadius = 10,
-    this.containerWidthFactor = 0.85/2, // Default factor is 80% of screen width
+    this.containerWidthFactor =
+        0.85 / 2, // Default factor is 80% of screen width
   }) : super(key: key);
 
   @override
@@ -44,27 +46,27 @@ class ImageWithOverlayText extends StatelessWidget {
       child: Stack(
         children: [
           Positioned(
-            left: leftPosition,
-            bottom: bottomPosition,
-            child: Container(
-              decoration: BoxDecoration(
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(20),
-                color: Colors.black38,
-              ),
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
-                child: Text(
-                overlayText,
-                style: TextStyle(
-                  color: textColor,
-                  fontSize: textSize,
-                  fontWeight: textWeight,
+              left: leftPosition,
+              bottom: bottomPosition,
+              child: Container(
+                decoration: BoxDecoration(
+                  shape: BoxShape.rectangle,
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.black38,
                 ),
-                          ),
-              ),
-            )
-          ),
+                child: Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 10, vertical: 2),
+                  child: Text(
+                    overlayText,
+                    style: TextStyle(
+                      color: textColor,
+                      fontSize: textSize,
+                      fontWeight: textWeight,
+                    ),
+                  ),
+                ),
+              )),
         ],
       ),
     );

@@ -1,7 +1,10 @@
+import 'package:agriculture_app/AppColors.dart';
 import 'package:agriculture_app/Homepage.dart';
 import 'package:agriculture_app/NavigationBar.dart';
 import 'package:agriculture_app/TopTrending.dart';
 import 'package:agriculture_app/VideoPage.dart';
+import 'package:agriculture_app/community_page.dart';
+import 'package:agriculture_app/marketplace_page.dart';
 import 'package:agriculture_app/utils/HiddenDrawer.dart';
 import 'package:flutter/material.dart';
 
@@ -16,11 +19,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NavigatorBarPage(),
+      home: HiddenDrawerPage(),
     );
   }
 }
