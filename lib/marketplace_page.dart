@@ -1,6 +1,8 @@
 import 'package:agriculture_app/AppColors.dart';
 import 'package:agriculture_app/image_with_text.dart';
+import 'package:agriculture_app/utils/BrowsebyCategory.dart';
 import 'package:agriculture_app/utils/MarketplaceTiles.dart';
+import 'package:agriculture_app/utils/MostPopular.dart';
 import 'package:flutter/material.dart';
 
 class MarketplacePage extends StatelessWidget {
@@ -203,196 +205,11 @@ class MarketplacePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            overlayText: '⚡',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            overlayText: '⚡',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            overlayText: '⚡',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            overlayText: '⚡',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          ImageWithOverlayTextSmall(
-                            imagePath: 'assets/images/3.jpg',
-                            overlayText: '⚡',
-                            width: 180,
-                            height: 200,
-                          ),
-                          SizedBox(
-                            height: 5,
-                          ),
-                          Text(
-                            '₹799',
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Plant Fertilizer 200g',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w500, fontSize: 18),
-                          ),
-                          SizedBox(
-                            height: 2,
-                          ),
-                          Text(
-                            'Barasat, WB',
-                            style: TextStyle(
-                                fontWeight: FontWeight.w300, fontSize: 15),
-                          ),
-                        ],
-                      ),
-                    ),
+                    MostPopular(),
+                    MostPopular(),
+                    MostPopular(),
+                    MostPopular(),
+                    MostPopular(),
                   ],
                 ),
               ),
@@ -413,42 +230,10 @@ class MarketplacePage extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: ImageWithOverlayTextSmall(
-                        imagePath: 'assets/images/3.jpg',
-                        overlayText: 'Seeds',
-                        width: 180,
-                        height: 200,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: ImageWithOverlayTextSmall(
-                        imagePath: 'assets/images/3.jpg',
-                        overlayText: 'Seedlings',
-                        width: 180,
-                        height: 200,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: ImageWithOverlayTextSmall(
-                        imagePath: 'assets/images/3.jpg',
-                        overlayText: 'Machinery',
-                        width: 180,
-                        height: 200,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: 10),
-                      child: ImageWithOverlayTextSmall(
-                        imagePath: 'assets/images/3.jpg',
-                        overlayText: 'Fertilizers',
-                        width: 180,
-                        height: 200,
-                      ),
-                    ),
+                    BrowsebyCategoryTiles(),
+                    BrowsebyCategoryTiles(),
+                    BrowsebyCategoryTiles(),
+                    BrowsebyCategoryTiles(),
                   ],
                 ),
               )
