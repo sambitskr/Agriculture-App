@@ -1,6 +1,7 @@
 import 'package:agriculture_app/AppColors.dart';
 import 'package:agriculture_app/utils/TrendingTabs.dart';
 import 'package:flutter/material.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
@@ -16,9 +17,14 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.menu,
-          color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            SimpleHiddenDrawerController.of(context).toggle();
+          },
         ),
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -180,6 +186,8 @@ class _MyHomePageState extends State<MyHomePage> {
                   ),
                 ),
 
+                //Navigation BAr
+
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -198,7 +206,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           style: TextStyle(
                               fontSize: 15,
                               fontWeight: FontWeight.bold,
-                              color: AppColors.primaryColor),
+                              color: AppColors.primaryColor.withOpacity(0.5)),
                         ),
                       ],
                     ),

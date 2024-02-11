@@ -1,6 +1,8 @@
 import 'package:agriculture_app/Homepage.dart';
+import 'package:agriculture_app/NavigationBar.dart';
 import 'package:agriculture_app/TopTrending.dart';
 import 'package:agriculture_app/VideoPage.dart';
+import 'package:agriculture_app/utils/HiddenDrawer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(),
+      home: NavigatorBarPage(),
     );
   }
 }

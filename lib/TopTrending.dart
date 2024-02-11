@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hidden_drawer_menu/hidden_drawer_menu.dart';
 
 class TopTrendingPage extends StatefulWidget {
   const TopTrendingPage({super.key});
@@ -14,9 +15,14 @@ class _TopTrendingPageState extends State<TopTrendingPage> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Colors.transparent,
-        leading: Icon(
-          Icons.menu,
-          color: Colors.black,
+        leading: IconButton(
+          icon: Icon(
+            Icons.menu,
+            color: Colors.black,
+          ),
+          onPressed: () {
+            SimpleHiddenDrawerController.of(context).toggle();
+          },
         ),
         title: Text(
           "Top Trending",
@@ -52,6 +58,15 @@ class _TopTrendingPageState extends State<TopTrendingPage> {
                     borderRadius: BorderRadius.circular(15),
                   ),
                 ),
+                SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  child: Text(
+                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+                    style: TextStyle(fontSize: 20),
+                  ),
+                )
               ],
             ),
           ),
