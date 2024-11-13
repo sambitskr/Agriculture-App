@@ -58,12 +58,18 @@ class CommunityPage extends StatelessWidget {
               ),
             ),
           ],
-          bottom: const TabBar(tabs: [
+          bottom: TabBar(tabs: [
             Tab(
-              text: 'Discussions',
+              child: Text(
+                'Discussions',
+                style: TextStyle(color: Colors.black),
+              ),
             ),
             Tab(
-              text: 'Jobs',
+              child: Text(
+                'Jobs',
+                style: TextStyle(color: Colors.black),
+              ),
             )
           ]),
         ),
